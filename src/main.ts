@@ -10,10 +10,10 @@ async function bootstrap() {
 
   app.enableCors({
     origin: 'http://example.com',
-    methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
-    preflightContinue: false,
-    optionsSuccessStatus: 204,
+    methods: '*',
+    preflightContinue: true,
     credentials: true,
+    allowedHeaders: 'Origin, X-Requested-With, Content-Type, Accept',
   });
 
   await app.listen(3000);
