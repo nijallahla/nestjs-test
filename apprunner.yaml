@@ -4,6 +4,7 @@ build:
   commands:
     build:
       - npm i
+      - npm run build
 run:
   command: npm run start:dev
   network:
