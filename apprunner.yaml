@@ -1,8 +1,10 @@
 version: 1.0
-runtime: node16
+runtime: nodejs14
 build:
   commands:
     build:
-      - npm install
+      - npm i
 run:
   command: npm run start:dev
+  network:
+    port: 3000
